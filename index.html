@@ -7,18 +7,30 @@
 
 <body>
     <!-- Formulario -->
-    <!-- <action> indica como se procesara el mensaje  -->
-    <!-- <post> indica como se procesara el mensaje  -->    
+    <!-- 
+        <action> indica la URL del script o pagina web que procesara los datos enviados. 
+        <GET> Los datos se envian como parte de la URL, es limitado y NO seguro.
+        <POST> Los datos ingresados en el formulario se empaquetan y se envian al servidor web, es algo mas seguro.  
+    -->
     <form action="/formulario" method="POST">
 
-
+        <!-- 
+            <LABEL> Identifica el elemento que viene a continuacion.  El parametro FOR asocia la etiqueta con el elemento al cual se quiere referir
+            <INPUT> Captura la informacion ingresada por el usuario.
+            TYPE: Define el tipo de dato que debe ingresar el usuario: TEXT, PASSWORD, NUMBER, EMAIL, DATE, CHECKBOX, RADIO.
+            ID: Identificador unico que se asigna al campo.  Sirve para referenciar el elemento desde JS, CSS u otras partes del HTML.
+            NAME: Permite identificar y diferenciar los campos cuando se envia un formulario.
+            PLACEHOLDER: Muestra un texto gris claro de sugerencia, desaparece al ingresar texto.
+        
+        -->
         <label for="nombre">NOMBRE</label>
         <input type="text" id="nombre" name="nombre" placeholder="Nombre">
         <br>
+        
         <label for="apellido">APELLIDO</label>
         <input type="text" id="apellido" name="apellido" placeholder="Apellido">
-
         <br>
+        
         <label for="comentario">COMENTARIO</label>
         <textarea rows="10" cols="50" id="comentario" name="comentario"
             placeholder="Escribe un comentario aqui.."></textarea>
