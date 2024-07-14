@@ -3,16 +3,85 @@
 
 <head>
     <title>MI PRIMERA WEB</title>
+
+    <style>
+        table,
+        th,
+        td {
+
+            border: 1px solid black;
+
+        }
+    </style>
+
 </head>
 
 <body>
+
+
+    <h2>TABLAS</h2>
+
+    <table style="width: 500px;">
+
+        <thead>
+
+            <tr>
+
+                <th>Producto</th>
+                <th>Precio</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Hola Beats</td>
+                <td>Gratis</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Audifonos</td>
+                <td>50 Lukas</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Placa Base Con Procesador</td>
+                <td>90 Lukas</td>
+
+            </tr>
+
+        <tfoot>
+
+            <td></td>
+            <td>Total: 14 Lukas</td>
+
+
+        </tfoot>
+
+
+
+
+        </tbody>
+
+    </table>
+    <br>
+    <br>
+
+
     <!-- Formulario -->
     <!-- 
         <action> indica la URL del script o pagina web que procesara los datos enviados. 
         <GET> Los datos se envian como parte de la URL, es limitado y NO seguro.
         <POST> Los datos ingresados en el formulario se empaquetan y se envian al servidor web, es algo mas seguro.  
     -->
-    <form action="/formulario" method="POST">
+    <form action="/formulario" method="get">
 
         <!-- 
             <LABEL> Identifica el elemento que viene a continuacion.  El parametro FOR asocia la etiqueta con el elemento al cual se quiere referir
@@ -24,18 +93,34 @@
         
         -->
         <label for="nombre">NOMBRE</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-        <br>
-        
+        <input value="Aqui pones tu nombre.." type="text" id="nombre" name="nombre" placeholder="Nombre">
+        <br> <!-- salto de linea -->
+
         <label for="apellido">APELLIDO</label>
         <input type="text" id="apellido" name="apellido" placeholder="Apellido">
         <br>
-        
+
+        <!-- <textarea> Sirve para crear un campo de texto multilinea  -->
+
         <label for="comentario">COMENTARIO</label>
         <textarea rows="10" cols="50" id="comentario" name="comentario"
             placeholder="Escribe un comentario aqui.."></textarea>
         <br>
-        <input type="submit">
+        <!-- Submit es para envair el formulario -->
+        <!-- <input type="submit"> -->
+
+        <!-- 
+            
+            Para enviar formularios es mejor la etiqueta button
+        Esta etiqueta tiene 3 tipos.
+        
+        -->
+        <button type="button">Tipo Boton</button>
+        <button type="reset">TIpo Reset</button>
+        <button type="submit">TIpo Submit</button>
+
+
+
     </form>
 
 
@@ -65,6 +150,60 @@
 
     <a target="_blank" href="https://www.google.co.nz">IR A GOOGLE</a>
     <img src="img/RobotitoAmigable.jpg" width="400">
+
+    <h2>LISTAS</h2>
+
+    <!-- ul: Unordered List - Lista  no Ordenada -->
+
+    <!--         
+        li: list item  
+    -->
+
+    <ul>
+
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+
+    </ul>
+    <!-- ol: Order List - Lista Ordenada -->
+    <ol>
+
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+
+    </ol>
+
+    <h2>Comenzar lista desde otro numero con el atributo &lt;value&gt; </h2>
+    <ol>
+
+        <li value="50">Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+
+        <h2>La siguiente es un elemento li de la lista pero que a su vez contiene otra lista</h2>
+
+        <li>
+
+            <ol style="list-style-type: lower-roman;">
+
+                <li>Sub Elemento 1</li>
+                <li>Sub Elemento 2</li>
+                <li>Sub Elemento 3</li>
+
+            </ol>
+
+        </li>
+
+    </ol>
+
+    <br>
+
+
 
 
 
